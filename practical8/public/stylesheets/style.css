@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 40px;
+    background: #f4f4f4;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.container{
+    border: 2px solid black;
+    width: 500px;
+    padding: 2rem;
+    margin-left: 350px;
+    margin-top: 150px;
+}
+#count {
+    font-size: 80px;
+    margin: 20px 0;
+}
+
+button {
+    font-size: 20px;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+#increment{
+    background-color: green;
+}
+
+#decrement{
+    background-color: rgb(234, 127, 20);
+}
+
+#reset{
+    background-color: rgb(199, 222, 210);
+}
+
+@media (max-width: 600px) {
+    #count {
+        font-size: 60px;
+    }
+
+    button {
+        width: 80%;
+        font-size: 18px;
+    }
+}

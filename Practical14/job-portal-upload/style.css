@@ -1,0 +1,131 @@
+/* styles.css - place in job-portal-upload/ */
+
+:root{
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --accent: #4f46e5;     /* indigo-600 */
+  --muted: #6b7280;      /* gray-500 */
+  --success: #10b981;    /* emerald-500 */
+  --danger: #ef4444;     /* red-500 */
+  --radius: 12px;
+  --shadow: 0 6px 18px rgba(18, 24, 38, 0.06);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background: linear-gradient(180deg, #f8fafc 0%, var(--bg) 100%);
+  color: #0f172a;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:32px;
+}
+
+/* container card */
+.upload-card{
+  width:100%;
+  max-width:520px;
+  background:var(--card);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:28px;
+  border:1px solid rgba(15,23,42,0.04);
+}
+
+/* heading */
+.upload-card h1{
+  margin:0 0 6px 0;
+  font-size:20px;
+  letter-spacing:-0.2px;
+}
+.upload-card p.lead{
+  margin:0 0 18px 0;
+  color:var(--muted);
+  font-size:13px;
+}
+
+/* file area */
+.form-row{
+  display:flex;
+  gap:16px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.file-input-wrapper{
+  flex:1 1 auto;
+  min-width:180px;
+  position:relative;
+}
+
+/* hide default file input but accessible */
+input[type="file"]{
+  position:absolute;
+  inset:0;
+  opacity:0;
+  width:100%;
+  cursor:pointer;
+}
+
+/* visible styled area */
+.file-drop{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:16px;
+  border-radius:10px;
+  border:1px dashed rgba(15,23,42,0.08);
+  background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.4));
+  transition: all 160ms ease;
+  min-height:56px;
+}
+
+.file-drop:hover{ transform: translateY(-2px); box-shadow: 0 8px 20px rgba(16,24,40,0.04); }
+.file-drop .meta{
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+}
+
+.meta .name{ font-weight:600; font-size:14px; color:#0f172a; }
+.meta .hint{ font-size:12px; color:var(--muted); }
+
+/* choose button */
+.btn{
+  background:var(--accent);
+  border:none;
+  color:white;
+  padding:10px 14px;
+  font-weight:600;
+  border-radius:10px;
+  cursor:pointer;
+  box-shadow: 0 6px 16px rgba(79,70,229,0.12);
+}
+.btn:active{ transform: translateY(1px); }
+
+/* message area */
+.message{
+  margin-top:14px;
+  font-size:13px;
+}
+.message.success{ color:var(--success); }
+.message.error{ color:var(--danger); }
+
+/* small note & progress */
+.small{
+  display:block;
+  margin-top:10px;
+  color:var(--muted);
+  font-size:12px;
+}
+
+/* responsive */
+@media (max-width:540px){
+  .form-row{ flex-direction:column; align-items:stretch; }
+  .btn{ width:100%; }
+}

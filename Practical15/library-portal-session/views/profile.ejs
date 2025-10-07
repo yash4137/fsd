@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Library Portal - Profile</title>
+    <style>
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background: #f8fafc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .profile-box {
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+        width: 340px;
+        text-align: center;
+      }
+      h2 {
+        color: #0f172a;
+        margin-bottom: 12px;
+      }
+      p {
+        font-size: 15px;
+        color: #374151;
+        margin: 6px 0;
+      }
+      a {
+        display: inline-block;
+        margin-top: 16px;
+        padding: 8px 16px;
+        background: #dc2626;
+        color: white;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      a:hover {
+        background: #b91c1c;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="profile-box">
+      <h2>Welcome, <%= username %>!</h2>
+      <p>You logged in at:</p>
+      <p><strong><%= loginTime %></strong></p>
+      <a href="/logout">Logout</a>
+    </div>
+  </body>
+</html>
